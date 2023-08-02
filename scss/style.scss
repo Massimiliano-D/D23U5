@@ -1,0 +1,58 @@
+/* style.scss */
+@import "reset";
+@import "colors";
+@import "font";
+@import "spacings";
+@import "buttons";
+@import "mixins";
+@import "animations";
+
+body {
+  font-family: $font-family;
+  color: $color-text;
+}
+
+/* Header/hero section */
+.header {
+  background-color: $bg-hero;
+  padding: 2rem;
+  text-align: center;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  .headline {
+    font-size: $font-size-title-big;
+    margin-bottom: map-get($spacings, lg);
+    @include floating();
+    @include fade-in-slide-down();
+  }
+
+  .buttons-container {
+    display: flex;
+    justify-content: center;
+    .btn {
+      @include floating();
+    }
+  }
+
+  .hero-image {
+    margin-left: map-get($spacings, lg);
+    img {
+      @include floating(0);
+    }
+  }
+}
+
+/* Grid */
+.grid-container {
+  margin: map-get($spacings, lg);
+  @include grid(4);
+
+  .grid-item {
+    background-color: #fff;
+    padding: map-get($spacings, md);
+    @include floating(1px solid #ccc);
+    @include fade-in-slide-down();
+  }
+}

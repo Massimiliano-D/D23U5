@@ -1,0 +1,27 @@
+/* _spacings.scss */
+$spacings: (
+  sm: 0.25rem,
+  normal: 0.5rem,
+  md: 1rem,
+  lg: 1.5rem,
+  xl: 2rem,
+  xxl: 3rem,
+);
+
+@each $spacing-size, $spacing-value in $spacings {
+  .padding-block-#{$spacing-size} {
+    padding-block: $spacing-value;
+  }
+
+  .padding-inline-#{$spacing-size} {
+    padding-inline: $spacing-value;
+  }
+
+  .margin-block-#{$spacing-size} {
+    margin-block: $spacing-value;
+  }
+
+  .margin-inline-#{$spacing-size} {
+    margin-inline: $spacing-value;
+  }
+}
